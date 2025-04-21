@@ -13,12 +13,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.menu {
-    padding: 20px 30px 40px 30px; /* haut droite bas gauche */
-    margin: 20px 70px 0 70px;
-    background-color: white;
-    border: none;
-}
 
 .logo {
     display: flex;
@@ -54,19 +48,7 @@ body {
     color: #333;
 }
 
-.reservation {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 30px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 15px 25px;
-    border-radius: 12px;
-    font-size: 15px;
-    color: #333;
-    text-align: left;
-    flex-wrap: wrap;
-}
+
 
 .bloc {
     display: flex;
@@ -175,15 +157,6 @@ body {
     border-radius: 6px;
 }
 
-.navigation {
-    margin: -30px 150px -30px 150px; /* réduit les côtés à 40px */
-    background-color: #ffe6f0; /* rose clair */
-    padding: 20px 20px; /* réduit le padding horizontal à 20px */
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 2;
-}
 
 /* Icône du menu hamburger */
 .hamburger {
