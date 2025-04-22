@@ -13,6 +13,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.menu {
+    padding: 20px 30px 40px 30px; /* haut droite bas gauche */
+    margin: 20px 70px 0 70px;
+    background-color: white;
+    border: none;
+}
 
 .logo {
     display: flex;
@@ -48,7 +54,19 @@ body {
     color: #333;
 }
 
-
+.reservation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #333;
+    text-align: left;
+    flex-wrap: wrap;
+}
 
 .bloc {
     display: flex;
@@ -157,6 +175,15 @@ body {
     border-radius: 6px;
 }
 
+.navigation {
+    margin: -30px 150px -30px 150px; /* réduit les côtés à 40px */
+    background-color: #ffe6f0; /* rose clair */
+    padding: 20px 20px; /* réduit le padding horizontal à 20px */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
 
 /* Icône du menu hamburger */
 .hamburger {
@@ -247,3 +274,175 @@ body {
     color: #cc2b7b;
     transform: scale(1.1);
 }
+/* Responsive pour tablettes (max 1024px) */
+@media screen and (max-width: 1024px) {
+    .menu, .Accueil {
+        margin: 20px 30px;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: center; /* Centrer horizontalement */
+        justify-content: center;
+        text-align: center; /* Centrer le texte */
+        gap: 5px;
+        width: 100%;
+    }
+
+    .logo img {
+        margin-bottom: 10px;
+    }
+
+    .reservation {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .navigation {
+        margin: -30px 40px;
+        padding: 15px;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-right {
+        margin-top: 15px;
+    }
+}
+
+/* Responsive pour mobiles (max 768px) */
+@media screen and (max-width: 768px) {
+    .menu, .Accueil {
+        margin: 10px 15px;
+        padding: 15px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+
+    .titre {
+        font-size: 28px;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+
+    .reservation {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    .bloc {
+        min-width: auto;
+    }
+
+    .Bienvenue {
+        font-size: 24px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        display: none; /* Masqué par défaut */
+        width: 100%;
+        background-color: #ffe6f0;
+        padding: 10px 0;
+    }
+
+    .navigation ul.active {
+        display: flex; /* Affiché quand actif */
+    }
+
+    .navigation ul .nav-links, 
+    .navigation ul .social-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        margin: 10px auto;
+    }
+
+    .hamburger div {
+        height: 4px;
+        background-color: #000;
+        border-radius: 2px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-left h2 {
+        font-size: 20px;
+    }
+
+    .footer-left p, .footer-right a {
+        font-size: 13px;
+    }
+
+    .footer-right a {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation ul {
+      flex-direction: column;
+      align-items: flex-start;
+      display: none;
+      background-color: #ffe6f0;
+      width: 100%;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      padding: 20px;
+      border-radius: 0 0 20px 20px;
+    }
+  
+    .navigation ul.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+      margin-left: auto;
+    }
+  
+    .nav-links,
+    .social-icons {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+    }
+  
+    .nav-links li,
+    .social-icons li {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  

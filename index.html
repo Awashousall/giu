@@ -21,7 +21,6 @@
         </div>
       </div>
 
-
       <div class="reservation">
         <div class="bloc">
           <p class="titre">
@@ -44,42 +43,32 @@
         </div>
       </div>
     </div>
-
-    <!-- Navigation qui s'affichera juste en dessous de la réservation -->
-    <div class="navigation" id="navigation">
-      <ul>
-        <div class="nav-links">
-          <li><a href="accueil.html">ACCUEIL</a></li>
-          <li><a href="#">L'INSTITUT</a></li>
-          <li><a href="#">MASSAGES</a></li>
-          <li><a href="#">SOIN</a></li>
-          <li><a href="#">TARIFS RESERVATION</a></li>
-          <li><a href="#">CONTACT</a></li>
-        </div>
-        <div class="social-icons">
-          <li>
-            <a href="https://facebook.com" target="_blank"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://instagram.com" target="_blank"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </li>
-          <li>
-            <a href="#" aria-label="Twitter"
-              ><i class="fab fa-twitter"></i
-            ></a>
-          </li>
-          <li>
-            <a href="#" aria-label="LinkedIn"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-          </li>
-        </div>
-      </ul>
+    
+    <!-- Navigation -->
+    <nav class="navigation">
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <ul class="nav-container">
+    <div class="nav-links">
+      <li><a href="#">ACCUEIL</a></li>
+      <li><a href="#">L'INSTITUT</a></li>
+      <li><a href="#">MASSAGES</a></li>
+      <li><a href="#">SOIN</a></li>
+      <li><a href="#">TARIFS RÉSERVATION</a></li>
+      <li><a href="#">CONTACT</a></li>
     </div>
+    <div class="social-icons">
+      <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+    </div>
+  </ul>
+</nav>
+
   </header>
 
   <div class="Accueil">
@@ -106,29 +95,21 @@
         </p>
       </div>
       <div class="footer-right">
-        <a href="#" aria-label="Facebook"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-        <a href="#" aria-label="Instagram"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a href="#" aria-label="Twitter"
-          ><i class="fab fa-twitter"></i
-        ></a>
-        <a href="#" aria-label="LinkedIn"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
   </footer>
 
   <script>
-    const toggle = document.getElementById("menu-toggle");
-    const navigation = document.getElementById("navigation");
-
-    toggle.addEventListener("click", () => {
-      navigation.classList.toggle("active");
-    });
+    function toggleMenu() {
+        const nav = document.querySelector(".navigation ul");
+      nav.classList.toggle("active");
+    }
   </script>
+  
+
 </body>
 </html>

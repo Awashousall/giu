@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-image: url("https://pix10.agoda.net/hotelImages/8786863/0/d41ae4d2094a139eb9b42838a192a211.jpg?s=1024x768");
     background-size: cover;
@@ -11,6 +12,7 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
 }
+
 .menu {
     padding: 20px 30px 40px 30px; /* haut droite bas gauche */
     margin: 20px 70px 0 70px;
@@ -26,15 +28,18 @@ body {
     border-radius: 12px;
     margin-bottom: 20px;
 }
+
 .logo img {
     width: 120px;
     margin-right: 20px;
 }
+
 .textes {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .titre {
     font-size: 36px;
     font-weight: bold;
@@ -42,11 +47,13 @@ body {
     margin-bottom: 5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 .slogan {
     font-size: 18px;
     margin: 10px;
     color: #333;
 }
+
 .reservation {
     display: flex;
     justify-content: flex-end;
@@ -60,6 +67,7 @@ body {
     text-align: left;
     flex-wrap: wrap;
 }
+
 .bloc {
     display: flex;
     flex-direction: column;
@@ -69,8 +77,8 @@ body {
     min-width: 180px;
     line-height: 1.4;
 }
+
 .bloc .titre {
-    
     color: black;
     margin-bottom: 3px;
     display: flex;
@@ -78,39 +86,32 @@ body {
     gap: 6px;
     font-size: 15px;
 }
+
 .bloc p {
     margin: 0;
     align-items: center;
 }
+
 .icone {
     font-size: 30px;
     margin-right: 12px;
     display: inline-block;
     vertical-align: middle;
 }
+
 .barre {
     width: 2px;
     height: 50px;
     background-color: #aaa;
     margin: 0 10px;
 }
-@media screen and (max-width: 768px) {
-    .reservation {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
 
-    .barre {
-        display: none;
-    }
-}
 
 
 .Accueil {
     margin: 0px 70px 20px 70px; /* haut droite bas gauche */
     padding: 20px 30px;
-    min-height: 300px; /* ajuste la hauteur minimale */
+    min-height: 800px; /* ajuste la hauteur minimale */
     background-image: url('https://www.spa-de-beaute.fr/wp-content/uploads/2016/09/Accueil-et-reception-dans-les-spas-1.jpg');
     background-size: cover;
     background-position: center;
@@ -120,18 +121,50 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
-    
     border: none;
     gap: 10px;
     text-align: center;
 }
-
 
 .Accueil p {
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
     margin: 0;
     padding: 0;
+}
+
+.defile-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background-color: #ffe6f0; /* rose clair */
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.Bienvenue {
+    font-size: 32px;
+    font-weight: bold;
+    color: #d94f7a; /* rose plus vif */
+    white-space: nowrap;
+    display: inline-block;
+    animation: defilement 10s linear infinite;
+}
+
+@keyframes defilement {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.offre {
+    font-size: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .lien-accueil {
@@ -150,6 +183,21 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 2;
+}
+
+/* Icône du menu hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 5px;
 }
 
 
@@ -174,7 +222,6 @@ body {
     gap: 15px;
 }
 
-
 .navigation li a {
     text-decoration: none;
     color: #333;
@@ -187,5 +234,172 @@ body {
     color: #cc2b7b; /* rose foncé au survol */
 }
 
+/* --------- Footer --------- */
+.footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    margin-top: 60px;
+}
 
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.footer-left h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #4d2c3d;
+}
+
+.footer-left p {
+    margin: 4px 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-right a {
+    margin-left: 15px;
+    font-size: 20px;
+    color: #4d2c3d;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-right a:hover {
+    color: #cc2b7b;
+    transform: scale(1.1);
+}
+/* Responsive pour tablettes (max 1024px) */
+@media screen and (max-width: 1024px) {
+    .menu, .Accueil {
+        margin: 20px 30px;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: center; /* Centrer horizontalement */
+        justify-content: center;
+        text-align: center; /* Centrer le texte */
+        gap: 5px;
+        width: 100%;
+    }
+
+    .logo img {
+        margin-bottom: 10px;
+    }
+
+    .reservation {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .navigation {
+        margin: -30px 40px;
+        padding: 15px;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-right {
+        margin-top: 15px;
+    }
+}
+
+/* Responsive pour mobiles (max 768px) */
+@media screen and (max-width: 768px) {
+    .menu, .Accueil {
+        margin: 10px 15px;
+        padding: 15px;
+    }
+
+    .titre {
+        font-size: 28px;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+
+    .reservation {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    .bloc {
+        min-width: auto;
+    }
+
+    .Bienvenue {
+        font-size: 24px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        display: none; /* Masqué par défaut */
+        width: 100%;
+        background-color: #ffe6f0;
+        padding: 10px 0;
+    }
+
+    .navigation ul.active {
+        display: flex; /* Affiché quand actif */
+    }
+
+    .navigation ul .nav-links, 
+    .navigation ul .social-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        margin: 10px auto;
+    }
+
+    .hamburger div {
+        height: 4px;
+        background-color: #000;
+        border-radius: 2px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-left h2 {
+        font-size: 20px;
+    }
+
+    .footer-left p, .footer-right a {
+        font-size: 13px;
+    }
+
+    .footer-right a {
+        margin-left: 10px;
+    }
+}
